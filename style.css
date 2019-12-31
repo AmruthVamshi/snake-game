@@ -1,0 +1,17 @@
+body{
+	margin:0px;
+	padding:0px;
+	background-color: #f1f1f1;
+}
+.header{
+	background-color: #f4f4f4;
+	font-size: 24px;
+	text-align: center;
+	font-style: comic;
+}
+#canvPos {
+    padding: 20 20px 20px 0px;
+    width: 608px;
+    height: 648px;
+    margin: 0 auto;
+}
