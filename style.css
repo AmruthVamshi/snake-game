@@ -5,13 +5,37 @@ body{
 }
 .header{
 	background-color: #f4f4f4;
-	font-size: 24px;
+	font-size: 20px;
 	text-align: center;
 	font-style: comic;
 }
 #canvPos {
-    padding: 20 20px 20px 0px;
-    width: 608px;
-    height: 648px;
+    padding: 0 20px 20px 0px;
+    width: 574px;
+    height: 614px;
     margin: 0 auto;
+}
+  div.grid-container {
+  display: grid;
+  width:400px;
+  height:200px;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  margin:0 auto;
+  margin-top: 100px;
+}
+.grid-item {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin:5px;
+  font-size: 30px;
+  text-align: center;
+}
+.sp-g{
+background-color:white;
+}
+@media only screen and (min-width: 768px) {
+  div.grid-container {
+    display: none;
+  }
 }

@@ -1,10 +1,17 @@
 let direction = 'right'
+// for Desktop
 document.addEventListener('keydown', event => {
   if (event.keyCode == 37 && direction != 'right') direction = 'left'
   if (event.keyCode == 38 && direction != 'down') direction = 'up'
   if (event.keyCode == 39 && direction != 'left') direction = 'right'
   if (event.keyCode == 40 && direction != 'up') direction = 'down'
 })
+// for Mobile
+function left () { if (direction != 'right') direction = 'left' }
+function right () { if (direction != 'left') direction = 'right' }
+function up () { if (direction != 'down') direction = 'up' }
+function down () { if (direction != 'up') direction = 'down' }
+
 const canvas = document.querySelector('canvas.canv')
 const score_tag = document.getElementById('score')
 const ctx = canvas.getContext('2d')
@@ -13,7 +20,7 @@ background.src = 'snakeback.jpg'
 var box; var snake; var bait; var score = 0; var gameState; var bait_cordinates
 class food {
   	rand_food () {
-  		return Math.floor(Math.random() * (19)) * 32
+  		return Math.floor(Math.random() * (18)) * 32
   	}
 }
 function intialSetup () {
@@ -87,7 +94,7 @@ function foodEaten () {
   }
 }
 function gameEnded () {
-  if (snake[0].x >= 608 || snake[0].y >= 608 || snake[0].x < 0 || snake[0].y < 0) {
+  if (snake[0].x >= 574 || snake[0].y >= 574 || snake[0].x < 0 || snake[0].y < 0) {
     return true
   }
   for (i = 1; i < snake.length; i++) {

@@ -2,20 +2,29 @@
 	<head>
 		<title>Snake Game</title>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="style.css">		
+		<link rel="stylesheet" href="style.css">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 	</head>
 	<body>
 
 		<h3 class="header">| | Snake Game | |</h3>
-		<div id="canvPos">
-			<canvas class='canv' width="608px" height="608px">
+		<div id="canvPos" class="container">
+			<canvas class='canv' width="574px" height="574px">
 			</canvas>
 			<div id="score" style="text-align: center;font-size: 29;">0</div>
-			<div class=row>
+			<div class='row controls'>
 			<button id="start" class="btn-primary col-sm-4" onClick='startagain()'>Start</button>
 			<button id="pause" class="btn-primary col-sm-4" onClick='pause()'>Pause</button>
 			<button id="resume" class="btn-primary col-sm-4" onClick='resume()'>resume</button>		
 			</div>
+		</div>
+		<div class="grid-container">
+  			<div class="grid-item sp-g"></div>
+  			<button class='grid-item' onClick='up()'>^</button> 
+  			<div class="grid-item sp-g"></div>  
+  			<button class='grid-item' onClick='left()'>&lt</button>
+  			<button class='grid-item' onClick='down()'>down</button>
+ 			<button class='grid-item' onClick='right()'>&gt</button>    
 		</div>
 		<script src="main.js"></script>
 
